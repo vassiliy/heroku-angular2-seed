@@ -1,3 +1,6 @@
+var production = process.env.NODE_ENV == 'production'
+if (!production) { require('dotenv').config(); }
+
 var webpack = require('webpack');
 var path = require('path');
 
@@ -17,6 +20,9 @@ var webpackConfig = {
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(true),
     new webpack.optimize.CommonsChunkPlugin({ name: ['main', 'vendor', 'polyfills'], minChunks: Infinity }),
+    new webpack.EnvironmentPlugin([
+      'CONFIG_VAR', 'NODE_ENV'
+      ]),
   ],
 
   module: {

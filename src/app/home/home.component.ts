@@ -6,4 +6,5 @@ import {Component} from '@angular/core';
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
+  config = process.env.CONFIG_VAR;
 }

@@ -36,6 +36,16 @@ var webpackConfig = {
 
 };
 
+if (production) {
+  webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    mangle: true,
+    output: {
+      comments: false
+    },
+    compress: {
+      warnings: false
+    }}));
+}
 
 // Our Webpack Defaults
 var defaultConfig = {

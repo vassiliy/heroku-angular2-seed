@@ -1,4 +1,4 @@
-## angular2-seed
+## heroku-angular2-seed
 
 A simple starter project demonstrating the basic concepts of Angular 2.
 
@@ -25,3 +25,8 @@ First of all, this project is not forked from `angular/angular2-seed` for Heroku
 - At the settings page of your app at Heroku set value for `CONFIG_VAR` config var
 - Deploy the app with `git push heroku master`
 - Use `.env` file for config vars of development environment
+
+### Optionally
+
+- Take a look at [heroku-static-buildpack](https://github.com/heroku/heroku-buildpack-static)
+- Take a look at pretty self-explaining commits

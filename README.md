@@ -12,3 +12,16 @@ A simple starter project demonstrating the basic concepts of Angular 2.
 - run `npm start` to fire up dev server
 - open browser to [`http://localhost:3000`](http://localhost:3000)
 - if you want to use other port, open `package.json` file, then change port in `--port 3000` script
+
+### Deployment to Heroku
+First of all, this project is not forked from `angular/angular2-seed` for Heroku deployment requires some changes that look critically irrelevant to the original project.
+
+- Meet all Heroku prerequisites i.e. free [Heroku account](https://signup.heroku.com/signup/dc) and Heroku CLI [installed](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
+- Clone or fork this repository
+- Run dev server the same way as above
+- Create Heroku application with `heroku create`
+- Add Node.js buildpack: `heroku buildpacks:add heroku/nodejs`
+- Add static buildpack: `heroku buildpacks:add https://github.com/hone/heroku-buildpack-static`
+- At the settings page of your app at Heroku set value for `CONFIG_VAR` config var
+- Deploy the app with `git push heroku master`
+- Use `.env` file for config vars of development environment

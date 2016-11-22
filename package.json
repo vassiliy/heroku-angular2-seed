@@ -29,10 +29,10 @@
     "@angular/router": "^3.2.1",
     "@angular/upgrade": "^2.2.1",
     "@types/core-js": "^0.9.32",
-    "@types/node": "^6.0.48",
+    "@types/node": "^6.0.49",
     "angular2-in-memory-web-api": "^0.0.21",
     "angular2-template-loader": "^0.6.0",
-    "awesome-typescript-loader": "^3.0.0-beta.3",
+    "awesome-typescript-loader": "3.0.0-beta.3",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "css-loader": "^0.26.0",
@@ -45,7 +45,7 @@
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.14.0",
     "webpack-merge": "^0.17.0",
-    "zone.js": "~0.6.23"
+    "zone.js": "^0.6.26"
   },
   "keywords": [
     "Angular2",

@@ -44,8 +44,8 @@
     "typescript": "2.0.10",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.14.0",
-    "webpack-merge": "^0.17.0",
-    "zone.js": "~0.6.23"
+    "webpack-merge": "^0.18.0",
+    "zone.js": "^0.6.26"
   },
   "keywords": [
     "Angular2",

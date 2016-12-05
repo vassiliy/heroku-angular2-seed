@@ -35,7 +35,7 @@
     "awesome-typescript-loader": "^3.0.0-beta.9",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
-    "css-loader": "^0.26.0",
+    "css-loader": "^0.26.1",
     "ie-shim": "^0.1.0",
     "raw-loader": "^0.5.1",
     "reflect-metadata": "^0.1.3",

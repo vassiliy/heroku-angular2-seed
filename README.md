@@ -26,6 +26,13 @@ First of all, this project is not forked from `angular/angular2-seed` for Heroku
 - Deploy the app with `git push heroku master`
 - Use `.env` file for config vars of development environment
 
+### Heroku troubleshooting
+Removing failing `@types/core-js` is a little bit tricky. Heroku `node_modules` caching is awesomely helpful. You can delete them whichever way you like with `heroku run bash` — they'll never die. The key to their immortality is accessible only from Heroku cache:
+```bash
+$ heroku plugins:install heroku-repo
+$ heroku repo:purge_cache -a appname
+```
+
 ### Optionally
 
 - Take a look at [heroku-static-buildpack](https://github.com/heroku/heroku-buildpack-static)

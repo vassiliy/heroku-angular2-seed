@@ -6,6 +6,7 @@ import { GithubService } from './github/shared/github.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
+import { enableProdMode } from '@angular/core'
 
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
@@ -15,7 +16,7 @@ import { RepoDetailComponent } from './github/repo-detail/repo-detail.component'
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 
-@NgModule({
+const config = {
   declarations: [
     AppComponent,
     AboutComponent,
@@ -30,13 +31,19 @@ import { ContactComponent } from './contact/contact.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: true })
+    RouterModule.forRoot(rootRouterConfig, { useHash: true }),
   ],
   providers: [
     GithubService
   ],
   bootstrap: [ AppComponent ]
-})
+}
+
+if (process.env.NODE_ENV == 'production') {
+  enableProdMode()
+}
+
+@NgModule(config)
 export class AppModule {
 
 }
